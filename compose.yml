@@ -1,0 +1,44 @@
+services:
+  ros:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        UID: ${UID}
+        GID: ${GID}
+        USER_NAME: ${USER_NAME}
+        GROUP_NAME: ${GROUP_NAME}
+        PASSWORD: ${PASSWORD}
+        HOMEWORKSPACE: ${HOMEWORKSPACE}
+    image: ros-humble
+    container_name: ros_humble
+    network_mode: host
+    privileged: true
+    environment:
+      - DISPLAY=$DISPLAY
+      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+      - ROS_DOMAIN_ID=0
+      - XAUTHORITY=/home/${USER_NAME}/.Xauthority
+      - QT_X11_NO_MITSHM=1
+    tty: true
+    devices:
+      - "/dev/video0:/dev/video0"
+      - "/dev/video1:/dev/video1"
+      - "/dev/media1:/dev/media2"
+      - "/dev/gpiomem:/dev/gpiomem"
+      - "/dev/gpiochip0:/dev/gpiochip0"
+    volumes:
+      # GUI操作用
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      # ワークスペース
+      - type: bind
+        source: ../../
+        target: /home/${USER_NAME}/${HOMEWORKSPACE}
+      # SSH設定
+      - ~/.ssh:/home/${USER_NAME}/.ssh:ro
+      - ./code:/code
+      # デバイスツリー（WiringPi が参照するパス）
+      - /sys/firmware/devicetree/base:/proc/device-tree:ro
+      - /proc/device-tree:/proc/device-tree:ro
+      - /proc/cpuinfo:/proc/cpuinfo:ro
+    command: bash
