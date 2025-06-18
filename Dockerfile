@@ -40,7 +40,8 @@ RUN apt-get update && \
       python3-transitions \
       build-essential \
       ros-humble-raspimouse-description \
-      ros-humble-rplidar-ros && \
+      ros-humble-rplidar-ros \
+      ros-humble-cartographer* && \
     pip install --no-cache-dir opencv-contrib-python==4.6.0.66 && \
     echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc && \
     rosdep update

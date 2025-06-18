@@ -24,9 +24,10 @@ services:
     devices:
       - "/dev/video0:/dev/video0"
       - "/dev/video1:/dev/video1"
-      - "/dev/media1:/dev/media2"
+      - "/dev/media3:/dev/media3"
       - "/dev/gpiomem:/dev/gpiomem"
       - "/dev/gpiochip0:/dev/gpiochip0"
+      - "dev/ttyUSB0:dev/ttyUSB0"
     volumes:
       # GUI操作用
       - /tmp/.X11-unix:/tmp/.X11-unix

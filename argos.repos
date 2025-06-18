@@ -1,62 +1,91 @@
 
 repositories:
+  argos_bringup:
+    type: git
+    url: git@github.com:Fujisawa-lab-inside/argos_bringup.git
+    version: main
+
   argos_none_task_allocation:
     type: git
     url: git@github.com:Fujisawa-lab-inside/argos_none_task_allocation.git
     version: main
+  
   argos_task_allocation:
     type: git
     url: git@github.com:Fujisawa-lab-inside/argos_task_allocation.git
     version: main  
-  camera_pub_ros2_c:
+
+  argos_velosity_bridge_node:  
     type: git
-    url: git@github.com:Fujisawa-lab-inside/camera_pub_ros2_c.git
+    url: git@github.com:Fujisawa-lab-inside/argos_velocity_bridge_node.git  
     version: main
-  ros2serial_arduino:
-    type: git
-    url: git@github.com:Fujisawa-lab-inside/ros2serial_arduino.git
-    version: main
-  obstacle_detector:
-    type: git
-    url: git@github.com:Fujisawa-lab-inside/obstacle_detector.git
-    version: main
+
   ar_marker_detector_c:
     type: git
     url: git@github.com:Fujisawa-lab-inside/ar_marker_detector_c.git
     version: main
-  raspimouse_ros2:
+
+  camera_pub_ros2_c:
     type: git
-    url: git@github.com:Fujisawa-lab-inside/raspimouse_ros2.git
+    url: git@github.com:Fujisawa-lab-inside/camera_pub_ros2_c.git
     version: main
-  timer_pkg:
-    type: git
-    url: git@github.com:Fujisawa-lab-inside/timer_pkg.git
-    version: main
-  comm_pkg:
-    type: git
-    url: git@github.com:Fujisawa-lab-inside/comm_pkg.git
-    version: main
+
   comm_interface:
     type: git
     url: git@github.com:Fujisawa-lab-inside/comm_interface.git
     version: main
+
+  comm_pkg:
+    type: git
+    url: git@github.com:Fujisawa-lab-inside/comm_pkg.git
+    version: main
+
+  DynamixelHandler-ros2:
+    type: git
+    url: git@github.com:Fujisawa-lab-inside/DynamixelHandler-ros2.git  
+    version: main
+
+  magnet_control:
+    type: git
+    url: git@github.com:Fujisawa-lab-inside/magnet_control.git
+    version: main
+
   navigation2:
     type: git
     url: git@github.com:Fujisawa-lab-inside/navigation2.git
     version: main
+
+  obstacle_detector:
+    type: git
+    url: git@github.com:Fujisawa-lab-inside/obstacle_detector.git
+    version: main
+
   pub_ar_marker_tf:
     type: git
     url: git@github.com:Fujisawa-lab-inside/pub_ar_marker_tf.git
     version: main
-  nav_pkg:
-    type: git
-    url: git@github.com:Fujisawa-lab-inside/nav_pkg.git
-    version: main
+
   pub_ar_marker_tf_interface:
     type: git
     url: git@github.com:Fujisawa-lab-inside/pub_ar_marker_tf_interface.git
     version: main
+
+  raspimouse_ros2:
+    type: git
+    url: git@github.com:Fujisawa-lab-inside/raspimouse_ros2.git
+    version: main
+
   scan_match_checker:
     type: git
     url: git@github.com:Fujisawa-lab-inside/scan_match_checker.git
+    version: main
+
+  slam_gmapping:
+    type: git
+    url: git@github.com:Fujisawa-lab-inside/slam_gmapping.git
+    version: main
+
+  timer_pkg:
+    type: git
+    url: git@github.com:Fujisawa-lab-inside/timer_pkg.git
     version: main
