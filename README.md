@@ -183,3 +183,4 @@ xhost +local:docker
 X11サーバ－のインストール
 https://sourceforge.net/projects/vcxsrv/
 ```
+# .argos-setup

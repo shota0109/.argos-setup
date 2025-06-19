@@ -54,7 +54,7 @@ RUN groupadd gpio 2>/dev/null || true && \
     groupadd -g $GID $GROUP_NAME && \
     useradd -m -s /bin/bash \
       -u $UID -g $GID \
-      -G sudo,video,gpio \
+      -G sudo,video,gpio,dialout \
       $USER_NAME && \
     echo $USER_NAME:$PASSWORD | chpasswd && \
     echo "$USER_NAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
